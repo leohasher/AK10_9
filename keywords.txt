@@ -1,0 +1,9 @@
+Motor       KEYWORD1
+begin       KEYWORD2
+setZero     KEYWORD2
+sendCommand KEYWORD2
+getReply    KEYWORD2
+getCanId    KEYWORD2
+getPosition KEYWORD2
+getVelocity KEYWORD2
+getTorque   KEYWORD2
