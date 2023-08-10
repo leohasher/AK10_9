@@ -5,7 +5,7 @@ Library for controlling CubeMars AK10-9 servomotor
 1. Download repo as a .zip 
 2. In Arduino IDE Go to **Sketch > Include Library > Add .ZIP Libray...*** and select your file path
 
-## Required Hardware
+## Hardware
 This project uses the Arduino Mega, CubeMars AK10-9 servomotor, and Seeed Studio CAN-BUS Shield V2.0
 
 **Product Links and documentation:**
@@ -18,5 +18,6 @@ This project uses the Arduino Mega, CubeMars AK10-9 servomotor, and Seeed Studio
    * [Product Page](https://www.seeedstudio.com/CAN-BUS-Shield-V2.html)
    * [CAN-BUS Shield V2.0 Documentation](https://wiki.seeedstudio.com/CAN-BUS_Shield_V2.0/)
    
-## Required Software
+## Software
 1. [CAN-BUS Sheild Library](https://github.com/Seeed-Studio/Seeed_Arduino_CAN.git)
+2. (optional) [Upper Computer Software](https://www.cubemars.com/images/file/20230130/CubeMarstool_V1.31.rar) for controlling motor using R-Link and computer
