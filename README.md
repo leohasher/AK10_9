@@ -20,4 +20,4 @@ This project uses the Arduino Mega, CubeMars AK10-9 servomotor, and Seeed Studio
    
 ## Software
 1. [CAN-BUS Sheild Library](https://github.com/Seeed-Studio/Seeed_Arduino_CAN.git)
-2. (optional) [Upper Computer Software](https://www.cubemars.com/images/file/20230130/CubeMarstool_V1.31.rar) for controlling motor using R-Link and computer
+2. (optional) [Upper Computer Software](https://www.cubemars.com/images/file/20230130/CubeMarstool_V1.31.rar) for controlling motor using [R-Link](https://www.cubemars.com/goods-1140-RUBIK+LINK+V20.html) and computer
