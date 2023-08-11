@@ -13,8 +13,8 @@ void setup() {
   Motor.setZero();
   Motor.p_in = 0;
   Motor.v_in = 0;
-  Motor.t_in = -18;
-  Motor.kp_in = 0;
+  Motor.t_in = 0;
+  Motor.kp_in = 3;
   Motor.kd_in = 0;
 }
 
