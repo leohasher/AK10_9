@@ -19,6 +19,8 @@
 // SPI_CS Pin: D9
 #define SPI_CS_PIN_SEND 9
 
+#define T_CF 1.295f
+
 unsigned int _canId; //Motor ID
 unsigned char _len = 0;
 unsigned char _buf[8]; //buffer to store CAN message
@@ -81,7 +83,7 @@ void AK10_9::sendCommand(){
   //convert to uint
   unsigned int p_int = floatToUint(p_des, P_MIN, P_MAX, 16);
   unsigned int v_int = floatToUint(v_des, V_MIN, V_MAX, 12);
-  unsigned int t_int = floatToUint(t_des, T_MIN, T_MAX, 12);
+  unsigned int t_int = floatToUint(t_des/T_CF, T_MIN, T_MAX, 12);
   unsigned int kp_int = floatToUint(kp, KP_MIN, KP_MAX, 12);
   unsigned int kd_int = floatToUint(kd, KD_MIN, KD_MAX, 12);
 
@@ -145,7 +147,7 @@ float AK10_9::getVelocity(){
 }
 
 float AK10_9::getTorque(){
-  return _t_out;
+  return _t_out*T_CF;
 }
 
 void AK10_9::enterMotorMode(){

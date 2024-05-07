@@ -1,6 +1,9 @@
 #include <AK10_9.h>
 
 AK10_9 Motor(0x01);
+static int limitL = 46;
+static int limitR = 32;
+
 
 void setup() {
   Serial.begin(115200);
@@ -16,6 +19,8 @@ void setup() {
   Motor.t_in = 0;
   Motor.kp_in = 3;
   Motor.kd_in = 0;
+  pinMode(limitL, INPUT);
+  pinMode(limitR, INPUT);
 }
 
 void loop() {
@@ -27,11 +32,21 @@ void loop() {
   float t_out = Motor.getTorque();
   Serial.print("p:");
   Serial.print(p_out);
-  Serial.print(",");
-  Serial.print("v:");
+  // Serial.print(",");
+  Serial.print(",v:");
   Serial.print(v_out);
-  Serial.print(",");
-  Serial.print("t:");
-  Serial.println(t_out);
+  // Serial.print(",");
+  Serial.print(",t:");
+  Serial.print(t_out);
+
+  byte stateL = digitalRead(limitL);
+  byte stateR = digitalRead(limitR);
+  
+  Serial.print(",left:");
+  Serial.print(stateL);
+  Serial.print(",right:");
+  Serial.println(stateR);
+
+
   delay(100);
 }
